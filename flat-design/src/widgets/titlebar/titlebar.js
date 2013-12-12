@@ -9,6 +9,10 @@ widget.directive('titlebar', [function () {
         replace: false,
         link: function(scope, element) {
             console.log('new titlebar');
+            scope.onClickButton = function () {
+                console.log('toggleEditor');
+                scope.$emit('toggleEditor');
+            }
         }
     }
 }]);

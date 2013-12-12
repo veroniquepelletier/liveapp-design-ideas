@@ -1,0 +1,16 @@
+<div class='widget-slideshow' ng-class="{'widget-edit-mode': editMode}">
+    <div class='nav-container left-dongle'><</div>
+    <div class='nav-container right-dongle'>></div>
+    <div class='slide' ng-repeat='slide in slides'>
+        <!--div class='cover' ng-show='slide == selected'></div-->
+        <div class='header'>
+            <div class='info-square'>
+                [ ]
+            </div>
+            <div class='title'>
+                <strong>some</strong> title
+            </div>
+        </div>
+        <img ng-class="{selected: slide == selected, unselected: slide != selected}" src='{{slide.url}}'/>
+    </div>
+</div>
