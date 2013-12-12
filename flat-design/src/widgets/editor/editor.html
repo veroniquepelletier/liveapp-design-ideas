@@ -1,0 +1,10 @@
+<div class='editor'>
+    Suber-Duper-Editor
+    <br><br>
+    Chose flashcard type to edit<br>
+    <select ng-model="type" ng-options="c.name for c in cardTypes"></select><br><br>
+    Quadrant positionning <br>
+    <div class='quadrant' ng-repeat='item in quadrants' ng-click='onTapQuadrant(item)'>
+        <div class='content'>{{item.name}}</div>
+    </div>
+</div>

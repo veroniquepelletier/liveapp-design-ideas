@@ -1,0 +1,76 @@
+@import '../../app/defs.less';
+
+@slideshowHeight: 8rem;
+@slideshowImageHeight: 6rem;
+@slideshowWidth: 11rem;
+@navWidth: 3rem;
+@headerHeight: 2rem;
+
+.widget-slideshow {
+    width: 100%;
+    height: @slideshowHeight;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    overflow: hidden;
+    color: @white;
+    .nav-container {
+        width: @navWidth;
+        height: 100%;
+        background-color: @TC3;
+    }
+    .left-dongle {
+        float: left;
+    }
+    .right-dongle {
+        float: right;
+    }
+    .cover {
+        height: @slideshowHeight;
+        width: @slideshowWidth;
+        background-color:rgba(44,61,79,0.7);
+        position: absolute;
+        z-index: 99;
+    }
+    .slide {
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        float: left;
+        height: @slideshowHeight;
+        width: @slideshowWidth;
+        .header {
+            height: @headerHeight;
+            width: @slideshowWidth;
+            position: relative;
+            display: table;
+            background-color: @TC2;
+            .info-square {
+                height: @headerHeight;
+                vertical-align: middle;
+                display: table-cell;
+                background-color: @TC1;
+                width: @headerHeight;
+                text-align: center;
+            }
+            .title {
+                display: table-cell;
+                padding-left: 0.6rem;
+                vertical-align: middle;
+                display: table-cell;
+            }
+        }
+        .selected {
+            .saturate
+        }
+        .unselected {
+            .desaturate;
+        }
+        img {
+            height: @slideshowImageHeight;
+            width: @slideshowWidth;
+        }
+    }
+}
